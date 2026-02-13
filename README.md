@@ -1,7 +1,7 @@
 # Minist-Digits-Recognizer-in-C
 ## 📌 Introduction:
 
-        - The MNIST dataset is one of the most popular benchmark
+        * The MNIST dataset is one of the most popular benchmark
     datasets in machine learning and deep learning.
 
         - It consists of 42,031 grayscale images of handwritten
