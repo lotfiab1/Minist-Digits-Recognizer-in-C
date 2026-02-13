@@ -84,7 +84,7 @@ void destroyResources(Resources * res){
             UnmapViewOfFile(res->return_data);
         #else
             size_t s = strlen(res->return_data);
-            munmap(res->return_data,res->return_data );
+            munmap(res->return_data,s);
         #endif
     }
 }

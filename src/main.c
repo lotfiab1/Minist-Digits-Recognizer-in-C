@@ -10,7 +10,6 @@ int main(int argc,char * argv[]){
     //Train 
     const char * filename = "modeles/"LLM_NAME LLM_VERSION".pd"; //to save modele
     printf("filename : %s\n",filename);
-    return 0;
     Resources res = _Resources(NULL,"./res");
     if(!res.path) return 1;
     Resources dataset_csv = res.getResource(&res,"dataset.csv",1);

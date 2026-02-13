@@ -24,11 +24,13 @@ void *mmapFile(const char *path)
         
         CloseHandle(hMap);
     #else
-        int fd = open(__FILE__,O_RDONLY);
+        int fd = open(path,O_RDONLY);
         if(fd < 0){
             printf("Failed open file\n");
             return NULL;
         }
+        struct stat sb;
+        fstat(fd, &sb);
         data = mmap(NULL, sb.st_size, PROT_READ, MAP_PRIVATE, fd, 0);
         if (data == MAP_FAILED) {
             printf("Failed Map file %s\n",path);
