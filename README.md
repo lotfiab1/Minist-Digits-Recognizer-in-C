@@ -69,15 +69,26 @@ The model generalizes well with minimal overfitting.
 make
 ````
 
-Or manually:
+Or Download [Here](https://github.com/lotfiab1/Minist-Digits-Recognizer-in-C/blob/master/build.sh) :
+
+Then run :
 
 ```bash
-gcc src/*.c -o mnist -O2
+chmod +x build.sh
+```
+```bash
+./build.sh
 ```
 
 ### 🔧 Build (Windows)
+
 ```bash
-gcc -I include -O3 -march=native -ffast-math -o mnist.exe src/dataset.c src/datatypes.c src/fileshandler.c src/llm-digits-minist-model.c src/main.c src/math-numpy.c src/resourceshandler.c -L lib -lopenblas -lm
+make
+````
+Or Download [build.bat](https://github.com/lotfiab1/Minist-Digits-Recognizer-in-C/blob/master/build.bat)
+
+```bash
+./build.bat
 ```
 
 ### ▶ Run
@@ -99,15 +110,27 @@ mnist.exe
 ```
 Minist-Digits-Recognizer-in-C/
 │
+├── include/
+├── lib/
+|    ├── libopenblas.dll
+|
+├── modeles/
+├── res/
+|   ├── dataset.csv
+|
 ├── src/
-│   ├── matrix.c
-│   ├── model.c
-│   ├── train.c
-│   ├── main.c
+│   ├── dataset.c
+│   ├── datatypes.c
+│   ├── fileshandler.c
+│   ├── llm-digits-minist-model.c
+|   ├── main.c
+|   ├── math-numpy.c
+|   ├── resourceshandler.c
 │
-├── data/
-├── models/
+|
 ├── Makefile
+├── build.sh
+├── build.bat
 └── README.md
 ```
 
