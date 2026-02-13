@@ -76,9 +76,8 @@ gcc src/*.c -o mnist -O2
 ```
 
 ### 🔧 Build (Windows)
-
 ```bash
-gcc src/*.c -o mnist.exe -O2
+gcc -I include -O3 -march=native -ffast-math -o mnist.exe src/dataset.c src/datatypes.c src/fileshandler.c src/llm-digits-minist-model.c src/main.c src/math-numpy.c src/resourceshandler.c -L lib -lopenblas -lm
 ```
 
 ### ▶ Run
