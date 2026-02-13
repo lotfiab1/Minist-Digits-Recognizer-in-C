@@ -8,7 +8,9 @@
 
 int main(int argc,char * argv[]){
     //Train 
-
+    const char * filename = "modeles/"LLM_NAME LLM_VERSION".pd"; //to save modele
+    printf("filename : %s\n",filename);
+    return 0;
     Resources res = _Resources(NULL,"./res");
     if(!res.path) return 1;
     Resources dataset_csv = res.getResource(&res,"dataset.csv",1);
@@ -19,7 +21,7 @@ int main(int argc,char * argv[]){
     }
     Dataset train_set,test_set;
     Dataset dataset = parseCsv(dataset_csv.return_data,',');
-    
+
     split_set(&dataset,&train_set,&test_set,0.2);
     printf("%s Loaded Succefully\n",dataset_csv.path);
     printf("------------------- INFO ----------------\n");
@@ -35,8 +37,9 @@ int main(int argc,char * argv[]){
     printf("TEST:\n\n");
     predict(test_set.images,test_set.labels,model.trained_params,NULL,NULL);
     
+    
     //save modele
-    saveModele(model,"modeles/llm-modele-44.pd");
+    saveModele(model,filename);
 
 
     freeParams(&model.trained_params);

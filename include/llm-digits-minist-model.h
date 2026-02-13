@@ -3,6 +3,8 @@
 
 #include "datatypes.h"
 #include "math-numpy.h"
+#define LLM_NAME "llm-modele-"
+#define LLM_VERSION "44"
 
 typedef struct{
     Matrix w1,w2,b1,b2;

@@ -3,7 +3,7 @@
 
 #include "datatypes.h"
 #include <math.h>
-#include <cblas.h>
+#include "cblas.h"
 #include <time.h>
 typedef struct 
 {
