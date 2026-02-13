@@ -1,6 +1,4 @@
----
 
-```markdown
 # 📌 Minist-Digits-Recognizer-in-C
 
 ![MNIST Sample](res/digits.png)
